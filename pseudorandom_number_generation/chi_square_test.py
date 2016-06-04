@@ -11,10 +11,10 @@ def goodness_of_fit(expected, observed):
     if len(expected) != len(observed):
         raise ValueError('Expected and observed arrays have to be the same length!')
     length = len(expected)
-    sum = 0
+    statistics = 0
     for i in range(0, length):
-        sum += (observed[i] - expected[i]) ** 2 / expected[i]
-    return sum
+        statistics += (observed[i] - expected[i]) ** 2 / expected[i]
+    return statistics
 
 # todo: adjust function to make it more generic
 def make_bins(sequence):
@@ -23,3 +23,6 @@ def make_bins(sequence):
     for s in sequence:
         buckets[floor(s)]+=1
     return buckets
+
+def make_bins_continuous(interval :tuple, bucket_size :float, generated_sequence :list):
+    pass

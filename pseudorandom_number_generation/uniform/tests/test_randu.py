@@ -1,5 +1,5 @@
 import pseudorandom_number_generation.uniform.generators as prng
-from util import test_lcg
+from util import test_speed_lcg
 
 func_map = {
     "RANDU" : prng.randu,
@@ -9,7 +9,4 @@ func_map = {
 }
 
 for key, value in func_map.items():
-    test_lcg(value,key,3000,1000)
-
-
-
+    test_speed_lcg(value, key, 3000, 1000)

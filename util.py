@@ -13,7 +13,7 @@ def __print_time(generator_name, seq_len, loops_num, time ):
     print(message)
 
 
-def test_lcg(function, generator_name, seq_len, loops_num):
+def test_speed_lcg(function, generator_name, seq_len, loops_num):
     start = time()
     for i in range(0, loops_num):
         function(1, seq_len)
