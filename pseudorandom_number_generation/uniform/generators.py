@@ -34,7 +34,7 @@ def __combined_generator(sequence1, sequence2, sequence3):
     if len(sequence1) != len(sequence2) or len(sequence1) != len(sequence3):
         raise ValueError('All arrays have to be the same length!')
     length = len(sequence1)
-    return [__frac(sequence1[i] + sequence2[i] + sequence3[i]) for i in (0, length)]
+    return [__frac(sequence1[i] + sequence2[i] + sequence3[i]) for i in range(0, length)]
 
 
 def __wh(seed1, seed2, seed3, m1, m2, m3, a1, a2, a3, n):
